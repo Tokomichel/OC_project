@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import python
 
 """
@@ -6,6 +7,24 @@ generer un code sql automatiquement et
 faciliter l'insertion des 
 donnees dans les tables
 """
+=======
+import os
+#je fais un petit commentaire
+for i in range(4):
+   first_name = input('region_name<--:')
+#    last_name = input("last_name<--:")
+   if i < 3:
+        requete = "(\"" + first_name +"\"),\n"
+   else:
+        requete = "(\"" + first_name +"\");"
+    
+   print('\n')
+   
+   mon_fichier = open("regions.sql","a")
+   
+   mon_fichier.write(requete)
+   mon_fichier.close()
+>>>>>>> 16a6affb2e61a79cf94d1e2c8396fe416584efa8
 
 print("entrer la table dans laquelle vous voulez ajouter des donnees")
 nomTable = input('nom table:--') #nom table
@@ -59,8 +78,12 @@ for i in range(nombre_enregistrement):
    delete from table where some_colum = some_value
    """
 
+<<<<<<< HEAD
 first_sql_syntax += ";"   
 print(first_sql_syntax)
 
 mon_fichier = open("regions.sql", 'w')
 mon_fichier.write(first_sql_syntax)
+=======
+   # Je fais un petit nouveau test
+>>>>>>> 16a6affb2e61a79cf94d1e2c8396fe416584efa8
