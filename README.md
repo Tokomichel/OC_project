@@ -1,10 +1,3 @@
-# OC_project
- ## TOKO
- - toko michel
- - wouendeu ange
+#SQL'S code generator
 
- 
-'''
- insert into employees(first_name, last_name)
- VALUES
-''' 
+genere un code sql pour remplir une table donnee avec des enregistrements

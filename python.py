@@ -1,3 +1,5 @@
+import re 
+
 #Je veux concevoir des petits code en python
 
 def Sub_string(chaine: str, index_depart, index_fin):
@@ -21,19 +23,17 @@ def IsIn(caract):
 
     return True    
 
-if __name__ == "__main__":
-    # essai = Sub_string("Toko est mon nom.",0, index_fin = 4)
-    # print(essai)
- nomTable = "Toko"
- first_sql_syntax = f"insert into {nomTable}("
- list_propriete = ["first_name", "last_name", "birth_date"]
- #on implement le code sql
+def Contenue(text: str, pattern: str):
+    if re.match(r"[A-Za-z0-9 -]*(id)[A-Za-z0-9 _]*", "Je cherche un id"):
+        return True
+    else:
+        return False
 
-#  print(len(list_propriete))
- for i in range(len(list_propriete)):
-    #  print(i)
-     if i == len(list_propriete) - 1:
-          first_sql_syntax += list_propriete[i] + ")"
-     else:     
-         first_sql_syntax += list_propriete[i] + ","
- print(first_sql_syntax)
+
+
+if __name__ == "__main__":
+    # texte = "Ma fonction doit chercher le mot id"
+    # pattern = "id"
+    # print(MyOwnRegex(texte,pattern))
+
+     
