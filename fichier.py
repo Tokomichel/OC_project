@@ -1,4 +1,5 @@
 import python
+from python import Id_property
 
 """
 ce code python a pour but de 
@@ -11,6 +12,7 @@ donnees dans les tables
 print("entrer la table dans laquelle vous voulez ajouter des donnees")
 nomTable = input('nom table:--') #nom table
 list_propriete = list()
+list_idenntifiant = list()
 
 #on rempli la liste des proprietes
 while True:
@@ -20,10 +22,16 @@ while True:
          break
   else:       
      list_propriete.append(propriete)
+     if python.Contenue(propriete):
+          choix = input("Voulez-vous que ce champs soit en auto-incrementation? ")
+          if choix:
+             ident = Id_property(propriete, len(list_propriete))  
+             list_idenntifiant.append(ident) 
 
-first_sql_syntax = f"insert into {nomTable}("
 
-#on implement le code sql
+#la variable qui va contenir toute la syntaxe sql
+first_sql_syntax = f"insert into {nomTable}(" 
+
 
 #on ajoute les proprietes
 for i in range(len(list_propriete)):
